@@ -36,12 +36,12 @@ into `~/.hermes/`, then run `hermes gateway run`.
 ## Option C — Docker (recommended for isolation)
 
 Build:
-\`\`\`
+```
 docker build -t hermes:latest .
-\`\`\`
+```
 
 Run (env vars passed at run time configure model/key/chat automatically):
-\`\`\`
+```
 docker run -it \
   -v ~/hermes-data:/opt/data \
   -e HERMES_MODEL="gemini-2.5-flash" \
@@ -49,7 +49,7 @@ docker run -it \
   -e TELEGRAM_BOT_TOKEN="your_bot_token" \
   -e TELEGRAM_ALLOWED_USERS="your_chat_id" \
   hermes:latest
-\`\`\`
+```
 
 State persists on the host under `~/hermes-data` (mounted to `/opt/data`),
 so the image stays stateless and can be rebuilt or updated without losing config.
