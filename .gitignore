@@ -1,4 +1,4 @@
 .env
 *.env
-config.yaml
 hermes-data/
+/config.yaml
